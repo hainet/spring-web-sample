@@ -1,5 +1,6 @@
 package com.hainet.spring.web.sample.web;
 
+import lombok.Data;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,9 +18,15 @@ public class RequestController {
         return "@PathVariable: " + value;
     }
 
-    // curl -XGET http://localhost:8080/request-body --data baz
+    // curl -XGET localhost:8080/request-body -H 'Content-type: application/json' -d '{"value": "baz"}'
     @GetMapping("/request-body")
-    public String requestBodyTest(@RequestBody final String value) {
-        return "@RequestBody: " + value;
+    public String requestBodyTest(@RequestBody final RequestForm form) {
+        return "@RequestBody: " + form;
+    }
+
+    @Data
+    public static class RequestForm {
+
+        private String value;
     }
 }
