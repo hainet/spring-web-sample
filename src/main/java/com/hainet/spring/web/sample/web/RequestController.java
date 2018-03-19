@@ -47,7 +47,6 @@ public class RequestController {
 
     @Data
     public static class RequestBodyForm {
-
         private String value;
     }
 }
