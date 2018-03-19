@@ -21,7 +21,6 @@ public class RequestController {
         return "@PathVariable: " + value;
     }
 
-
     // curl -XGET http://localhost:8080/request-header -H 'Header-value: baz'
     @GetMapping("/request-header")
     public String requestHeaderTest(
@@ -30,8 +29,7 @@ public class RequestController {
             @RequestHeader final HttpHeaders httpHeaders,
             @RequestHeader(value = "Not-required", required = false) final String notRequired,
             @RequestHeader(value = "", defaultValue = "This is default value.") final String defaultValue) {
-        return
-                "@RequestHeader\n" +
+        return "@RequestHeader\n" +
                 "  Header-value: " + headerValue + "\n" +
                 "  Map<String, Object>: " + map + "\n" +
                 "  HttpHeaders: " + httpHeaders + "\n" +
