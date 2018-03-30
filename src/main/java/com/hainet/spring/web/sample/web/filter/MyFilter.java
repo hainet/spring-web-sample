@@ -3,11 +3,9 @@ package com.hainet.spring.web.sample.web.filter;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 @Component
-@WebFilter(urlPatterns = {"/**"})
 public class MyFilter implements Filter {
 
     @Override
