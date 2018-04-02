@@ -8,7 +8,7 @@ import org.springframework.web.context.request.RequestContextListener;
 import javax.servlet.ServletRequestEvent;
 
 @Component
-public class AppRequestContextListener extends RequestContextListener {
+public class MyRequestContextListener extends RequestContextListener {
 
     @Override
     public void requestInitialized(final ServletRequestEvent requestEvent) {

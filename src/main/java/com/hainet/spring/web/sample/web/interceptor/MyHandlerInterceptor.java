@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 // HandlerInterceptorを実装すると要件によっては空実装が発生するため、
 // HandlerInterceptorの抽象クラスであるHandlerInterceptorAdapterを拡張する。
-public class AppHandlerInterceptor extends HandlerInterceptorAdapter {
+public class MyHandlerInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(

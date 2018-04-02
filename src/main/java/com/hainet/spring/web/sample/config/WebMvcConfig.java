@@ -1,6 +1,6 @@
 package com.hainet.spring.web.sample.config;
 
-import com.hainet.spring.web.sample.web.interceptor.AppHandlerInterceptor;
+import com.hainet.spring.web.sample.web.interceptor.MyHandlerInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.filters.RequestDumperFilter;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @RequiredArgsConstructor
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
-    private final AppHandlerInterceptor handlerInterceptor;
+    private final MyHandlerInterceptor handlerInterceptor;
 
     @Override
     public void addInterceptors(final InterceptorRegistry registry) {

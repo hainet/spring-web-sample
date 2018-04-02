@@ -6,7 +6,7 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
 @Component
-public class AppServletRequestListener implements ServletRequestListener {
+public class MyServletRequestListener implements ServletRequestListener {
 
     @Override
     public void requestInitialized(final ServletRequestEvent requestEvent) {
